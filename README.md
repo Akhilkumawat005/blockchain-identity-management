@@ -6,7 +6,7 @@ A decentralized identity verification application built with Solidity, Hardhat, 
 
 ## 🚀 Features
 
-- **Privacy-Preserving:** Documents are hashed locally using SHA-256 via CryptoJS before reaching the blockchain—zero PII (Personally Identifiable Information) stored on-chain.
+- **Privacy-Preserving:** Documents are hashed locally using SHA-256 via CryptoJS before reaching the blockchain—zero PII stored on-chain.
 - **Smart Contract Security:** Written in Solidity (`IdentityRegistry.sol`) with role-based access control (`onlyAdmin`).
 - **Complete Credential Lifecycle:** Supports Credential Issuance, Revocation, and Verification.
 - **Modern Responsive UI:** Tabbed dashboard interface with real-time feedback and dynamic file upload states.
@@ -17,20 +17,21 @@ A decentralized identity verification application built with Solidity, Hardhat, 
 
 - **Smart Contract:** Solidity (`^0.8.20`), Hardhat
 - **Frontend:** JavaScript (ES6+), Ethers.js v5, CryptoJS, HTML5, CSS3
-- **Local Network:** Hardhat EVM Node (`http://127.0.0.1:8545`)
+- **Local Network:** Hardhat EVM Node (`[http://127.0.0.1:8545](http://127.0.0.1:8545)`)
 
 ---
 
 ## 📂 Directory & File Structure
 
+```text
 blockchain-identity-management/
 ├── contracts/
-│   └── IdentityRegistry.sol    # Smart contract containing core logic (issue, revoke, verify)
+│   └── IdentityRegistry.sol    # Smart contract containing core logic
 ├── scripts/
-│   └── deploy.js               # Deployment script to publish smart contract to local node
-├── .gitignore                  # Prevents node_modules, cache, and build files from being tracked
-├── app.js                      # Web3 frontend logic (Ethers.js provider, SHA-256 hashing, contract calls)
-├── hardhat.config.js           # Hardhat configuration (Solidity compiler version, network settings)
+│   └── deploy.js               # Script to deploy smart contract to local node
+├── .gitignore                  # Prevents node_modules, cache, and build files from tracking
+├── app.js                      # Web3 frontend logic (Ethers.js provider, SHA-256 hashing)
+├── hardhat.config.js           # Hardhat configuration settings
 ├── index.html                  # Responsive Web UI (Tabs, custom dropzone, dynamic feedback)
 ├── package.json                # Project metadata and dependencies
 └── package-lock.json           # Exact dependency tree lockfile
